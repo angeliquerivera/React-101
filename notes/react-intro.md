@@ -58,3 +58,35 @@
 #### `react-dom`
 
 - It is a helper that gives us the ability to take a `react` component and transform it into real `DOM` elements.
+
+### JSX
+
+- JSX is a mixture of JS and HTML.
+- If you have a JSX expression that spans multiple lines, wrap it in parentheses.
+- JSX also has access to all HTML attributes
+- In JSX, use `className` instead of `class` for class attribute
+- Use braces to embed JS into JSX
+- When JS code is embedded in braces, it should be invoked
+
+#### Conditionals
+
+- Conditonals CANNOT be done using `if-else` embedded
+- 3 ways to do conditionals in JSX:
+  - 1st way : ternary within braces
+  - 2nd way : use `if` statement outside of a JS element
+  - 3rd way : logical AND, `&&`, operator; also known as a short-circuit
+
+#### Parents, Children, Fragments
+
+- ALL JSX elements must have a parent element
+- Parent elements contain all the child subelements
+- Parent elements can be existing HTML tags OR you can add a fragment
+- Fragments let you wrap child subelements without add a node to the DOM
+
+#### Virtual DOM
+
+- React uses Virtual DOM
+- Virtual DOM can be thought as a blueprint for the DOM
+- When any changes are made to React elements, the Virtual DOM is updated
+- Virtual DOM finds differences between itself and the DOM and re-renders only the elements in the DOM that have changed
+- This makes the Virtual DOM faster and more efficient than updating the entire DOM
