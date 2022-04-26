@@ -32,11 +32,13 @@
 
 ```js
 // Babel input:
+// Arrow function from ES2015+
 [1, 2, 3]
   .map((n) => n + 1)
 
   [
     // Babel output:
+    // ES5 equivalent
     (1, 2, 3)
   ].map(function (n) {
     return n + 1;
@@ -70,7 +72,7 @@
 
 #### Conditionals
 
-- Conditonals CANNOT be done using `if-else` embedded
+- Conditionals CANNOT be done using `if-else` embedded
 - 3 ways to do conditionals in JSX:
   - 1st way : ternary within braces
   - 2nd way : use `if` statement outside of a JS element
@@ -82,6 +84,13 @@
 - Parent elements contain all the child subelements
 - Parent elements can be existing HTML tags OR you can add a fragment
 - Fragments let you wrap child subelements without add a node to the DOM
+
+#### What is the DOM?
+
+- `DOM` stands for "Document Object Model"
+- Programming interface for web documents
+- Data representation of the objects that make up the contents of the web document
+  - DOM represents a web document as nodes and objects
 
 #### Virtual DOM
 
