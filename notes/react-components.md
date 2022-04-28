@@ -40,6 +40,29 @@ export default function App() {
 
 ### Class Components
 
+React component as a class, not function.
+
+```js
+import React from "react";
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <section>
+        <h3>
+          Hey {this.props.name}, this is an example of a class-based React
+          component!
+        </h3>
+      </section>
+    );
+  }
+}
+```
+
+## Can you use a component more than once in an app?
+
+Yes, because of the way React adds components to the DOM
+
 ## React App Structure
 
 ### Component Organization
