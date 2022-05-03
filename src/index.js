@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
+import Counter from "./Counter";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+// ReactDOM renders (COMPONENT, location)
+ReactDOM.render(<Counter />, document.getElementById("app"));

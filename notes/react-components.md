@@ -70,3 +70,16 @@ Yes, because of the way React adds components to the DOM
 We can place our components inside a folder called `components` in the `src` folder.`
 
 ### Importing components into the App
+
+## Dynamic Content (State vs Props)
+
+### State in a React Component
+
+- Changes in the view aka render of a React component are ALWAYS described by state
+- `this.state` is immutable (read-only)
+- Immutability is the idea that once an obj or variable has been created, its value should NEVER change or be updated by anything
+  - For objs and classes, this also includes any key-value pairs (nothing should change)
+
+## `this` and `.bind()`-ing context
+
+- `.bind()` method creates a new function that when called has its `this` keyword set to the provided value.
