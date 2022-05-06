@@ -5,55 +5,34 @@ const counterStyles = {
 };
 
 export default class Counter extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    // If `startVal` exists, use `startVal`; else start at 0
     this.state = {
-      currCount: 0,
+      currCount: this.props.startVal || 0,
     };
-    this.addToCount = this.addToCount.bind(this);
-    this.subtractOne = this.subtractOne.bind(this);
-    this.addFive = this.addFive.bind(this);
-    this.subtractFive = this.subtractFive.bind(this);
-    this.resetToZero = this.resetToZero.bind(this);
+
+    this.adjustCount = this.adjustCount.bind(this);
   }
 
-  addToCount() {
+  // Ternary Syntax -  CONDITIONAL ? TRUE RESULT : FALSE RESULT
+  adjustCount(num) {
     this.setState({
-      currCount: this.state.currCount + 1,
+      currCount: num !== 0 ? this.state.currCount + num : 0,
     });
-  }
 
-  subtractOne() {
-    this.setState({
-      currCount: this.state.currCount - 1,
-    });
+    // The if-else conditional way
+    // if (num === 0) {
+    //   this.setState({
+    //     currCount: 0,
+    //   });
+    // } else {
+    //   this.setState({
+    //     currCount: this.state.currCount + num,
+    //   });
+    // }
   }
-
-  addFive() {
-    this.setState({
-      currCount: this.state.currCount + 5,
-    });
-  }
-
-  subtractFive() {
-    this.setState({
-      currCount: this.state.currCount - 5,
-    });
-  }
-
-  resetToZero() {
-    this.setState({
-      currCount: this.state.currCount - this.state.currCount,
-    });
-  }
-
-  /**
-   * Add buttons to this Counter that:
-   * Subtracts 1
-   * Add 5
-   * Subract 5
-   * Reset to 0
-   */
 
   render() {
     return (
@@ -61,11 +40,11 @@ export default class Counter extends Component {
         <nav id="navbar">Counter.js</nav>
         <div id="counter">
           <h1 style={counterStyles}>{this.state.currCount}</h1>
-          <button onClick={this.addToCount}>Add 1</button>
-          <button onClick={this.subtractOne}>Subtract 1</button>
-          <button onClick={this.addFive}>Add 5</button>
-          <button onClick={this.subtractFive}>Subtract 5</button>
-          <button onClick={this.resetToZero}>Reset to 0</button>
+          <button onClick={() => this.adjustCount(1)}>Add 1</button>
+          <button onClick={() => this.adjustCount(-1)}>Subtract 1</button>
+          <button onClick={() => this.adjustCount(5)}>Add 5</button>
+          <button onClick={() => this.adjustCount(-5)}>Subtract 5</button>
+          <button onClick={() => this.adjustCount(0)}>Reset to 0</button>
         </div>
       </section>
     );
