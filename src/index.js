@@ -1,18 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Counter from "./Counter";
-import { element, HeadingComponent } from "./ElementVsComponent";
+// import Counter from "./Counter";
+import CounterHook from "./CounterHook.jsx";
+// import { element, HeadingComponent } from "./ElementVsComponent";
 
 // const Container = () => (
 //   <div>
-//     <HeadingComponent
-//       heading={"It's the Oozora Police!"}
-//       className={"holotext"}
-//     />
-//     {element}
+//     <Counter />
+//     <Counter />
 //   </div>
 // );
 
-// ReactDOM renders (COMPONENT, location)
-ReactDOM.render(<Counter startVal={102} />, document.getElementById("app"));
+// ReactDOM renders (Component to be rendered, React attachment location in DOM)
+ReactDOM.render(<CounterHook />, document.getElementById("app"));
