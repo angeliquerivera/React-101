@@ -108,3 +108,14 @@ function MyComponent() {
   }, [val1, val2, val3]);
 }
 ```
+
+### `useContext` hook
+
+#### Signature
+
+```js
+const value = useContext(myContext);
+```
+
+- `useContext` accepts a context object (value returned by `React.createContext`)
+- A component that calls `useContext` will always re-render when the context value changes

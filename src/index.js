@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import CarsList from "./CarsList";
 // import Counter from "./Counter";
 import CounterHook from "./CounterHook.jsx";
 // import { element, HeadingComponent } from "./ElementVsComponent";
@@ -13,4 +14,4 @@ import CounterHook from "./CounterHook.jsx";
 // );
 
 // ReactDOM renders (Component to be rendered, React attachment location in DOM)
-ReactDOM.render(<CounterHook />, document.getElementById("app"));
+ReactDOM.render(<CarsList />, document.getElementById("app"));

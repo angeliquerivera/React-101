@@ -5,24 +5,26 @@ const counterStyles = {
 };
 
 export default function CounterHook(props) {
-  // const [state, setState] = useState(initialState);
+  // const [stateVal, setStateFunc] = useState(initialStateVal);
   const [count, setCount] = useState(0);
-  const [countState, setCountState] = useState(0);
+  const [countText, setCountText] = useState(0);
 
   useEffect(() => {
+    // Defining a function to run based on dependencies (or lack thereof)
     const updateCount = () => {
-      setCountState(count);
+      setCountText(count);
     };
 
-    return updateCount();
+    // Run this function every time listed dependencies change
+    updateCount();
   }, [count]);
 
   /**
    * Value change event order
    * 'Add 1' button triggers `setCount` setState function to change `count`
    * `count` updates to new value; useEffect triggers `updateCount` function
-   * `updateCount` changes value of `countState`
-   * React renders page again with BOTH changed values, `count` & `countState`
+   * `updateCount` changes value of `countText`
+   * React renders page again with BOTH changed values, `count` & `countText`
    */
 
   return (
@@ -33,7 +35,7 @@ export default function CounterHook(props) {
       <div id="counter">
         <h1 style={counterStyles}>{count}</h1>
         <code>
-          <pre>The value of count is: {countState}</pre>
+          <pre>The value of count is: {countText}</pre>
         </code>
         <button onClick={() => setCount(count + 1)}>Add 1</button>
         <button onClick={() => setCount(count - 1)}>Subtract 1</button>
