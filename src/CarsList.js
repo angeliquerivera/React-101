@@ -1,34 +1,32 @@
+// library imports
 import React from "react";
-import SingleCarCard from "./components/SingleCarCard";
 
+// component imports
+import SingleCarCard from "./components/SingleCarCard";
+import VehicleTypes from "./components/VehicleTypes";
+
+// local data
 import carListingInfo from "../data/car_listing_info.json";
 
-const vehicleTypes = ["car", "motorcycle", "SUV"];
+const vehicleTypesArr = ["car", "motorcycle", "SUV"];
 
 export default function CarsList() {
   return (
-    <section className="container">
+    <section className="container-fluid">
       <h1>{"This is CarsList"}</h1>
       <h2>We've got all the vehicles you could ever want, including:</h2>
-      <ul>
-        {vehicleTypes.map((type) => (
-          <li key={type}>{type}</li>
-        ))}
-      </ul>
+
+      <VehicleTypes types={vehicleTypesArr} />
 
       <h2>Our Car List</h2>
       {/* Rows can have a max of 12 cols */}
       <div className="row">
-        {carListingInfo.map((carDetailsObj) => {
-          const basicCarInfo = `${carDetailsObj.car_year} ${carDetailsObj.car_make} ${carDetailsObj.car_model}`;
-
-          return (
-            <SingleCarCard
-              key={basicCarInfo}
-              singleCarDetails={carDetailsObj}
-            />
-          );
-        })}
+        {carListingInfo.map((singleCarData) => (
+          <SingleCarCard
+            key={singleCarData.uid}
+            singleCarDetails={singleCarData}
+          />
+        ))}
       </div>
     </section>
   );
