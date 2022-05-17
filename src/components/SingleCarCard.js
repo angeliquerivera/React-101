@@ -58,6 +58,7 @@ export default function SingleCarCard({ singleCarDetails }) {
   function formatTelephone(telNumber) {
     // ex tel-number (123) 456-7890
     telNumber.slice(1, 3);
+    telNumber.replace();
   }
 
   const roundedValue = roundUpToNearestNine(strToNum(car_price));
