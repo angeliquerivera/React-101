@@ -16,9 +16,9 @@
 
 Some of most used hooks are:
 
-- useState hook:
-- useEffect hook
-- useContext hook
+- `useState` hook:
+- `useEffect` hook
+- `useContext` hook
 
 ### `useState` hook
 
