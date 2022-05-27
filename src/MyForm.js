@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 /**
  * A contact form with three input fields:
@@ -15,8 +15,30 @@ export default function MyForm(props) {
   const [contactInfo, setContactInfo] = useState({
     name: "",
     email: "",
-    phone: null,
+    phone: "",
   });
+
+  /**
+   * Update the input field state as each input changes
+   * @function handleChange
+   * @param {SyntheticEvent} event
+   */
+  const handleChange = (event) => {
+    // console.log("state is about to be changed to", {
+    //   ...contactInfo,
+    //   [event.target.name]: event.target.value,
+    // });
+
+    setContactInfo({
+      ...contactInfo,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(contactInfo);
+  };
 
   return (
     <section className="container">
@@ -28,9 +50,9 @@ export default function MyForm(props) {
 
       <div className="row">
         <div className="col">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div>
-              <label className="form-label" for="name">
+              <label className="form-label" htmlFor="name">
                 Contact Name
               </label>
               <input
@@ -38,10 +60,11 @@ export default function MyForm(props) {
                 type="text"
                 name="name"
                 className="form-control"
+                onChange={handleChange}
               />
             </div>
             <div>
-              <label className="form-label" for="email">
+              <label className="form-label" htmlFor="email">
                 Contact E-mail
               </label>
               <input
@@ -49,21 +72,23 @@ export default function MyForm(props) {
                 type="email"
                 name="email"
                 className="form-control"
+                onChange={handleChange}
               />
             </div>
             <div>
-              <label className="form-label" for="phonenumber">
+              <label className="form-label" htmlFor="phone">
                 Contact Phone Number
               </label>
               <input
                 value={contactInfo.phone}
                 type="tel"
-                name="phonenumber"
+                name="phone"
                 className="form-control"
+                onChange={handleChange}
               />
             </div>
             <div className="mt-4">
-              <button>Submit Contact</button>
+              <button type="submit">Submit Contact</button>
             </div>
           </form>
         </div>
