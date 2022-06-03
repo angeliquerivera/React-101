@@ -24,20 +24,25 @@ export default function MyForm(props) {
    * @param {SyntheticEvent} event
    */
   const handleChange = (event) => {
-    // console.log("state is about to be changed to", {
-    //   ...contactInfo,
-    //   [event.target.name]: event.target.value,
-    // });
-
     setContactInfo({
       ...contactInfo,
       [event.target.name]: event.target.value,
     });
   };
 
+  /**
+   * Submit form data and reset `contactInfo` in order to receive data for a contact submission.
+   * @function handleSubmit
+   * @param {SyntheticEvent} event
+   */
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(contactInfo);
+    setContactInfo({
+      name: "",
+      email: "",
+      phone: "",
+    });
   };
 
   return (

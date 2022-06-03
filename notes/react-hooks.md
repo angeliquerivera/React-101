@@ -6,6 +6,16 @@
 - Hooks are backwards compatible
 - Hooks are functional components
 
+## What are some of most important rules to follow when using hooks?
+
+[5 Mistakes to Avoid When Using React Hooks](https://dmitripavlutin.com/react-hooks-mistakes-to-avoid/)
+
+- You want to make sure that hooks are called as early within your functional component as possible
+- Do not use stale `state`
+- Do not create stale closures
+- Do not use `state` for infrastructure data
+- Do not forget to clean up side effects
+
 ## What is a hook?
 
 - Hooks are functions that let you "hook into" React, state, and life cycle features from function components

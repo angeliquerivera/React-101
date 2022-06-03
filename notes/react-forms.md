@@ -192,3 +192,60 @@ const handleChange = (event) => {
 // [event.target.name] is the computed property name of the CHANGING value
 // event.target.value is the new value to be assigned
 ```
+
+## `MyForm.js` Review Questions
+
+### How can we manage the information this form component is handling?
+
+- We can import `useState` from React to manage the info within this component
+
+### How are we setting up `useState` to handle the form's data?
+
+- We set up a tuple that contains the reference to the `state` value and its corresponding `setState` function; we also assign the initial value of `useState` to an object that contains 3 key-value pairs; one for each corresponding form input
+
+### What is the importance of each `<input>` having a `name` attribute?
+
+- When you interact with the form and go to type in your input, those inputs become the source of an event. Because the inputs each have a `name` attribute, it allows us to tell React how to refer to each targeted event by its name to change its value as needed
+
+### How do interactive tags like `<input>` work with events in React?
+
+- An `event` is when some sort of action is happening on the website, typically as the result of some kinda interaction. On the event itself we can access a whole bunch of data, such as the event's target. Having a name value on each input allows us to refer to that input when it's being targeted
+
+```js
+const handleChange = (event) => {
+  console.log(event.target.name);
+  console.log(event.target.value);
+  // setContactInfo({
+  //   ...contactInfo,
+  //   [event.target.name]: event.target.value,
+  // });
+};
+```
+
+### When there's no `onChange` handler on the `<input>` fields, we get this error; how do we fix it? Why?
+
+```
+Warning: You provided a `value` prop to a form field without an `onChange` handler.
+This will render a read-only field.
+If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.
+```
+
+- Place an `onChange` event handler in the `<input>` field and gave it the value of a function that will handle the changes of that input's value.
+
+### With the `onChange` handlers in place, we try to add our values to the inputs, only to see that we're not updating the values in the inputs. How do we assign the value of each input as it changes?
+
+- Set up a function to handle these changes by reading off of the event
+- Spread out old state values, compute the changing values by reading off of the event's target
+
+### Why is it a good idea for these `<input name="something">` attributes to match the key-values pair assigned as the initial state?
+
+- If your event target name matches some value within your state, you can use the computed property value to handle ALL cases of change within a form instead of having to manually designate changes for all of them individually via their own `onChange` function that only changes the one field
+
+### When a form is submitted, the form has a default action - what is it?
+
+- The default action when a form is submitted is to refresh the page
+
+### How do we prevent this form submission page refresh?
+
+- Attach an `onSubmit` event handler to the `<form>` tag
+- pass it some `handleSubmit` function that will call a certain function on the event, `event.preventDefault()`, to prevent the form from refreshing the page.
