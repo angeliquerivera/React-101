@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
  * @param {any} props - something
  * @return {jsx}
  */
-export default function MyForm(props) {
+export default function MyForm({ addContact }) {
   // const [stateField, setStateFieldFunc] = useState(initialState)
   const [contactInfo, setContactInfo] = useState({
     name: "",
@@ -37,7 +37,7 @@ export default function MyForm(props) {
    */
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(contactInfo);
+    addContact(contactInfo);
     setContactInfo({
       name: "",
       email: "",
