@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
  * - contact's phone #
  * When the form is submitted, the form data will be saved in a `contacts` state and passed to a {@link ContactList} component, where it is rendered in the browser.
  * @function MyForm
- * @param {any} props - something
+ * @param {Function} addContact {@link FormRoot based useState setState function}
  * @return {jsx}
  */
 export default function MyForm({ addContact }) {
