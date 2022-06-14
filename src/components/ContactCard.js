@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactCard({ name, phone, email }) {
   return (
-    <div key={phone} className="row mb-3">
+    <div className="row mb-3">
       <div className="col-12">
         <div className="card">
           <div className="card-header">{name}</div>

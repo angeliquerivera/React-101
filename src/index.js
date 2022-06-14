@@ -1,12 +1,12 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
 // OLD METHOD:
 // import ReactDOM from "react-dom";
 
 // NEW METHOD:
 import { createRoot } from "react-dom/client";
-
-import FormRoot from "./FormRoot";
+import ReactRouterRoot from "./components/ReactRouterRoot";
 
 // OLD METHOD:
 /// ReactDOM renders (Component to be rendered, React attachment location in DOM)
@@ -17,4 +17,8 @@ import FormRoot from "./FormRoot";
  * Using `createRoot`
  */
 const root = createRoot(document.getElementById("app"));
-root.render(<FormRoot />);
+root.render(
+  <BrowserRouter>
+    <ReactRouterRoot />
+  </BrowserRouter>
+);

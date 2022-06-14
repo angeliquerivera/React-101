@@ -17,7 +17,6 @@ export default function FormRoot() {
    */
   const addContact = (newSubmittedContact) => {
     updateContacts([...contacts, newSubmittedContact]);
-    console.log(contacts);
   };
 
   return (
