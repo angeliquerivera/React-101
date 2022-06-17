@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function ReactRouterRoot() {
   return (
@@ -14,6 +14,7 @@ export default function ReactRouterRoot() {
         <Link to="/invoices">Invoices</Link>
         <Link to="/expenses">Expenses</Link>
       </nav>
+      <Outlet />
     </div>
   );
 }

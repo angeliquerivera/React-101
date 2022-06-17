@@ -1,24 +1,27 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-
-// OLD METHOD:
-// import ReactDOM from "react-dom";
-
-// NEW METHOD:
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import ReactRouterRoot from "./components/ReactRouterRoot";
+import Expenses from "./routes/Expenses";
+import Invoices from "./routes/Invoices";
 
-// OLD METHOD:
-/// ReactDOM renders (Component to be rendered, React attachment location in DOM)
-// ReactDOM.render(<MyForm />, document.getElementById("app"));
-
-/**
- * NEWER, MUCH COOLER METHOD:
- * Using `createRoot`
- */
 const root = createRoot(document.getElementById("app"));
 root.render(
   <BrowserRouter>
-    <ReactRouterRoot />
+    <Routes>
+      <Route path="/" element={<ReactRouterRoot />}>
+        <Route path="invoices" element={<Invoices />} />
+        <Route path="expenses" element={<Expenses />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <h2>Page not found</h2>
+            </main>
+          }
+        />
+      </Route>
+    </Routes>
   </BrowserRouter>
 );
