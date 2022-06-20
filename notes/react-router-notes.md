@@ -30,6 +30,17 @@
 - Routes parent component
 - Each parent will contain a route component that dictates some form of path and an element aka the component you want to render for your path
 
+## `<Routes>`
+
+- The collection of all the route elements (aka singular routes)
+- Whenever the location aka the URL changes, `<Routes>` looks through all its children, the `<Route>` elements to find the best match and render that branch of the UI
+
+## `<Route>`
+
+- Think of each route as an `if` statement
+- if the `path` past into the route matches the current URL it matches its current element
+- Default route element is an `<Outlet>`
+
 ## Nested Routes
 
 - Nesting routes helps fix the issue of repeating shared layouts
@@ -92,3 +103,7 @@
 
 - Allow us to handle cases where a user navigates to a route that is invalid or unaccounted for by presenting them with a catch-all component case
 - The path for no match routes is simply `"*"`
+
+## Reading URL Params
+
+-

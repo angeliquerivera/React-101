@@ -13,6 +13,7 @@ export default function ReactRouterRoot() {
       >
         <Link to="/invoices">Invoices</Link>
         <Link to="/expenses">Expenses</Link>
+        <Link to="/about">About</Link>
       </nav>
       <Outlet />
     </div>
