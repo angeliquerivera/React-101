@@ -106,4 +106,32 @@
 
 ## Reading URL Params
 
--
+```js
+<Route path="invoices" element={<Invoices />}>
+  {/* /invoices/:invoiceID   <- convert id to a parameter */}
+  <Route path=":invoiceID" element={<SingleInvoice />} />
+</Route>
+```
+
+- When a route path is assigned a URL parameter, aka a string with a colon in front like Express, you can access that dynamic parameter within the matching element attribute of the same route by calling the `useParams()` hook
+- Once you call the `useParams()` hook, you can do a destructured assignment that contains the path's URL parameters
+
+```js
+// Given index.js Route setup
+<Route path=":invoiceID" element={<SingleInvoice />} />;
+
+// Inside `SingleInvoice.js`
+// Here's how you access that `invoiceID` parameter
+const { invoiceID } = useParams();
+```
+
+## Index Routes
+
+- Index routes share the path of their parent, hence why they don't have a path of their own
+
+### "WTF is an index route?"
+
+- Index routes render in the parent route's `<Outlet/>` at the parent route's path
+- Index routes match when the parent route matches but none of the children match
+- Index routes are the DEFAULT child route for a parent route
+- Index routes render when the user hasn't clicked one of the items in a navigation list yet

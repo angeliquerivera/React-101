@@ -22,6 +22,15 @@ root.render(
       <Route path="/" element={<ReactRouterRoot />}>
         {/* Route renders `/`  + `invoices` */}
         <Route path="invoices" element={<Invoices />}>
+          <Route
+            index
+            element={
+              <main style={{ padding: "1rem" }}>
+                <h3>Select an invoice</h3>
+              </main>
+            }
+          />
+
           {/* /this/is/an/:id <- convert id to a parameter */}
           <Route path=":invoiceID" element={<SingleInvoice />} />
         </Route>
