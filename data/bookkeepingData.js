@@ -124,6 +124,13 @@ let invoices = [
 export function getInvoices() {
   return invoices;
 }
+
+/**
+ * Return the single invoice object that has a number key-value that matches the input number parameter.
+ * @function getInvoice
+ * @param {Number} number
+ * @return {Object} single invoice with four key-value pairs
+ */
 export function getInvoice(number) {
   return invoices.find((invoice) => number === invoice.number);
 }

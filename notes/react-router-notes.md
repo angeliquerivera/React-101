@@ -135,3 +135,84 @@ const { invoiceID } = useParams();
 - Index routes match when the parent route matches but none of the children match
 - Index routes are the DEFAULT child route for a parent route
 - Index routes render when the user hasn't clicked one of the items in a navigation list yet
+
+## Active links
+
+- `<NavLink>` is a special type of link that knows when it is active
+- By default, an `active` class is added to `<NavLink>` component when it's active
+- This `isActive` parameter can be used in in-line callbacks to generate `style` objects or to select `className`
+
+### `style` object example
+
+```js
+import { NavLink } from "react-router-dom";
+
+let activeStyle = {
+  textDecoration: "underline",
+};
+
+<NavLink
+  to="/messages"
+  style={
+    ({isActive}) => isActive ? activeStyle : undefined
+  }
+>
+  Messages
+<NavLink>
+
+```
+
+### `className` example
+
+```js
+import { NavLink } from "react-router-dom";
+
+let activeClassName = "yourSpecialClass";
+
+<NavLink
+  to="/answers"
+  className={({ isActive }) => (isActive ? activeClassName : undefined)}
+>
+  Answers
+</NavLink>;
+```
+
+## Search Params
+
+- Search params are like URL params except they sit in a different spot in the URL
+- They are like Express' query params in that instead of being separated by "/"s, they are at the end of the URL after the question mark
+
+### Examples:
+
+All segments after `?` are the search params (query params)
+
+- `/login?success=1`
+- `/shoes?brand=puma&sort=asc&sortby=price`
+
+### How to `useSearchParams`
+
+1. Import `{ useSearchParams }` from `react-router-dom`
+2. Define `let [searchParams, setSearchParams] = useSearchParams();` within your component
+3. The `setSearchParams` function accepts an object that will contain all of the search key-value pairs that will be reflected in your URL
+
+   ```js
+   // Base route: `/invoices`
+
+   setSearchParams({ company: filter });
+
+   // Final URL: `/invoices?company=whateverFilterValueIs
+   ```
+
+4. We can do a `.get()` on our `searchParams` to grab the search parameter to focus
+
+   ```js
+   // Inside a .filter() callback
+
+   let filter = searchParams.get("company");
+   ```
+
+5. The final URL will be reflective of the search params that you are using and their corresponding search values
+   ```
+   `company` search value = "f"
+   Final URL: `/invoices?company=f
+   ```
