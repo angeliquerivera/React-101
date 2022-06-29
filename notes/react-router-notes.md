@@ -136,7 +136,7 @@ const { invoiceID } = useParams();
 - Index routes are the DEFAULT child route for a parent route
 - Index routes render when the user hasn't clicked one of the items in a navigation list yet
 
-## Active links
+## Active links via `<NavLink>` component [docs](https://reactrouter.com/docs/en/v6/components/nav-link)
 
 - `<NavLink>` is a special type of link that knows when it is active
 - By default, an `active` class is added to `<NavLink>` component when it's active
@@ -181,6 +181,8 @@ let activeClassName = "yourSpecialClass";
 
 - Search params are like URL params except they sit in a different spot in the URL
 - They are like Express' query params in that instead of being separated by "/"s, they are at the end of the URL after the question mark
+- The way that we can use search params is by using the `useSearchParams()` hook. This hook is used to read and modify the query string in the URL for the current location
+- It's very similar to `useState` in that `useSearchParams()` returns an array of two values, the search params and a function to update the search params
 
 ### Examples:
 
@@ -216,3 +218,21 @@ All segments after `?` are the search params (query params)
    `company` search value = "f"
    Final URL: `/invoices?company=f
    ```
+
+## The `useLocation` hook [docs](https://reactrouter.com/docs/en/v6/hooks/use-location)
+
+- A hook that returns the current location object
+
+### What does this object look like?
+
+```js
+// sample location object
+
+{
+  pathname: "/invoices",
+  search: "?filter=sa",
+  hash: "",
+  state: null,
+  key: "ae4cz2j"
+}
+```
