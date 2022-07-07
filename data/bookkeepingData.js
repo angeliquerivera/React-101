@@ -134,3 +134,14 @@ export function getInvoices() {
 export function getInvoice(number) {
   return invoices.find((invoice) => number === invoice.number);
 }
+
+/**
+ * Removes the invoice that has a number that matches the input number
+ * This is a FAKE delete that simply reassigns our dummy invoices array to be the resulting filter
+ * @function deleteInvoice
+ * @param {Number} number the number of the invoice we want to delete
+ * @returns {Object[]} all invoices with a number that DO NOT match the input number
+ */
+export function deleteInvoice(number) {
+  invoices = invoices.filter((invoice) => invoice.number !== number);
+}

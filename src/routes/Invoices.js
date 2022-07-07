@@ -16,6 +16,13 @@ export default function Invoices() {
     }
   };
 
+  /**
+   * Function used as callback that filters company names using received search params
+   * @function filterCompanyBySearchParam
+   * @param {Object} invoice - contains invoice #, company, amount and due date
+   * @prop {String} invoice.company - company name; processed alongside search params
+   * @returns {Boolean} allows the filter to determine whether the search input matches the beginning of a company name on an invoice
+   */
   const filterCompanyBySearchParam = (invoice) => {
     /**
      * Grab the value of the `company` searchParam
@@ -35,13 +42,19 @@ export default function Invoices() {
      * Lowercase all `companySearchVal`s to match lowercased filter
      * Returns boolean for filter function using `.startsWith`
      */
-
     let lowercaseSearchVal = companySearchValue.toLowerCase();
     let lowercaseCompany = invoice.company.toLowerCase();
 
     return lowercaseCompany.startsWith(lowercaseSearchVal);
   };
 
+  /**
+   * @function ActivatedLink
+   * @param {Object} invoice - contains all invoice values
+   * @param {Number} invoice.number - number of the invoice
+   * @param {String} invoice.company - company name of invoice
+   * @returns {QueryNavLink}
+   */
   const ActivatedLink = ({ number, company }) => (
     <QueryNavLink
       style={({ isActive }) => {
@@ -55,7 +68,7 @@ export default function Invoices() {
       baseRoute={`/invoices/${number}`}
       key={number}
     >
-      {company}
+      {`${number}: ${company}`}
     </QueryNavLink>
   );
 

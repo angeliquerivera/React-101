@@ -236,3 +236,13 @@ All segments after `?` are the search params (query params)
   key: "ae4cz2j"
 }
 ```
+
+## The `navigate()` function; navigating programmatically [docs](https://reactrouter.com/docs/en/v6/hooks/use-navigate)
+
+- Function you can access after using the `useNavigate` hook
+- `navigate()` function has two possible signatures:
+  - 1st signature is where `navigate()` takes two params:
+    - a string that details where you want to navigate to
+    - an optional object with optional `replace` and `state` key value pairs to manually adjust browser history
+  - 2nd signature is where you pass in a number dictating how far back or forward in the history you want to go
+    - Ex: `navigate(-2)` - equivalent to hitting back button twice
