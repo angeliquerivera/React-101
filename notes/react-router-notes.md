@@ -219,24 +219,6 @@ All segments after `?` are the search params (query params)
    Final URL: `/invoices?company=f
    ```
 
-## The `useLocation` hook [docs](https://reactrouter.com/docs/en/v6/hooks/use-location)
-
-- A hook that returns the current location object
-
-### What does this object look like?
-
-```js
-// sample location object
-
-{
-  pathname: "/invoices",
-  search: "?filter=sa",
-  hash: "",
-  state: null,
-  key: "ae4cz2j"
-}
-```
-
 ## The `navigate()` function; navigating programmatically [docs](https://reactrouter.com/docs/en/v6/hooks/use-navigate)
 
 - Function you can access after using the `useNavigate` hook

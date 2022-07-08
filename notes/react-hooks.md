@@ -129,3 +129,21 @@ const value = useContext(myContext);
 
 - `useContext` accepts a context object (value returned by `React.createContext`)
 - A component that calls `useContext` will always re-render when the context value changes
+
+## The `useLocation` hook [docs](https://reactrouter.com/docs/en/v6/hooks/use-location)
+
+- A hook that returns the current location object
+
+### What does this object look like?
+
+```js
+// sample location object
+
+{
+  pathname: "/invoices",
+  search: "?filter=sa",
+  hash: "",
+  state: null,
+  key: "ae4cz2j"
+}
+```
