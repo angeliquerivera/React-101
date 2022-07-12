@@ -99,3 +99,58 @@
 - When any changes are made to React elements, the Virtual DOM is updated
 - Virtual DOM finds differences between itself and the DOM and re-renders only the elements in the DOM that have changed
 - This makes the Virtual DOM faster and more efficient than updating the entire DOM
+
+## Componentizing
+
+- The action of selecting rendered React code and extracting it out into its own separate component that can then be referenced anywhere within the project
+
+### Why componentize?
+
+- React works off the idea that you can build reusable components that you can reference as many times as you need to within your project to eliminate the need for repeated code
+- Also allows you to write simplier looking components by allowing you to extract component logic out into its own separate concern
+- This leads to easier readability, testability, and usage throughout your project
+
+### What's the basic pattern for componentizing?
+
+1. Identify the logic that you can extract into its own component
+2. Think about the category of component it would be as it simplifies organization
+3. Create a new component file with a name that's representative of the functionality the component will provide
+4. Copy the logic from the source component into this new destination
+5. Generalize all the static values that are being operated on in the logic of the component into variables
+   1. e.g. Fetching from an API: you can change the string URL into a `fetchURL` variable and add a corresponding declaration for that variable where appropriate
+   2. Creating a specialized <Link> component: changing the string `to` prop to a generalized `destination` variable
+6. Ensure that the new component has access to all necessary libraries by adding all required imports FROM YOUR NEW FILE LOCATION
+   1. This means that your old import `from` locations may need to be updated!
+7. Export your new component
+8. Use your new component wherever you need to by importing it and passing in whatever `props` it needs
+9. Remove all duplicated logic and imports from the source component
+
+## Project Roots and `createRoot` from `react-dom`
+
+- `createRoot` creates the attachment point for your React project to hook into your HTML
+
+### Breaking down an example:
+
+```js
+// index.js
+const root = createRoot(document.getElementById("app"));
+```
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/bundle.js"></script>
+    <title>React 101 Basics</title>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
+```
+
+- `createRoot` finds where the id `app` is located inside the HTML file and connects the React project to the HTML document

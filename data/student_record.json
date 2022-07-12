@@ -1,0 +1,352 @@
+[
+  {
+    "student": "Claire Viggars",
+    "absences": 3,
+    "final_exam": 69,
+    "term_paper": 92,
+    "midterm": 97,
+    "quizzes": {
+      "one": 16,
+      "two": 79,
+      "three": 78,
+      "four": 52,
+      "five": 96
+    }
+  },
+  {
+    "student": "Ronni Vittet",
+    "absences": 4,
+    "final_exam": 88,
+    "term_paper": 63,
+    "midterm": 99,
+    "quizzes": {
+      "one": 82,
+      "two": 64,
+      "three": 99,
+      "four": 41,
+      "five": 100
+    }
+  },
+  {
+    "student": "Samson Dingley",
+    "absences": 8,
+    "final_exam": 58,
+    "term_paper": 89,
+    "midterm": 39,
+    "quizzes": {
+      "one": 70,
+      "two": 91,
+      "three": 87,
+      "four": 27,
+      "five": 99
+    }
+  },
+  {
+    "student": "Phyllida D'Alwis",
+    "absences": 4,
+    "final_exam": 95,
+    "term_paper": 65,
+    "midterm": 85,
+    "quizzes": {
+      "one": 33,
+      "two": 75,
+      "three": 83,
+      "four": 42,
+      "five": 88
+    }
+  },
+  {
+    "student": "Karla Poundford",
+    "absences": 5,
+    "final_exam": 81,
+    "term_paper": 80,
+    "midterm": 96,
+    "quizzes": {
+      "one": 73,
+      "two": 90,
+      "three": 92,
+      "four": 35,
+      "five": 91
+    }
+  },
+  {
+    "student": "Wit Fumagallo",
+    "absences": 3,
+    "final_exam": 55,
+    "term_paper": 86,
+    "midterm": 88,
+    "quizzes": {
+      "one": 24,
+      "two": 83,
+      "three": 97,
+      "four": 47,
+      "five": 90
+    }
+  },
+  {
+    "student": "Heidi Blackboro",
+    "absences": 0,
+    "final_exam": 79,
+    "term_paper": 80,
+    "midterm": 94,
+    "quizzes": {
+      "one": 68,
+      "two": 70,
+      "three": 82,
+      "four": 49,
+      "five": 92
+    }
+  },
+  {
+    "student": "Wang Challace",
+    "absences": 2,
+    "final_exam": 57,
+    "term_paper": 93,
+    "midterm": 55,
+    "quizzes": {
+      "one": 23,
+      "two": 93,
+      "three": 75,
+      "four": 88,
+      "five": 96
+    }
+  },
+  {
+    "student": "Evangeline Siuda",
+    "absences": 8,
+    "final_exam": 79,
+    "term_paper": 73,
+    "midterm": 92,
+    "quizzes": {
+      "one": 56,
+      "two": 52,
+      "three": 68,
+      "four": 83,
+      "five": 91
+    }
+  },
+  {
+    "student": "Gaelan De Moreno",
+    "absences": 0,
+    "final_exam": 84,
+    "term_paper": 62,
+    "midterm": 71,
+    "quizzes": {
+      "one": 21,
+      "two": 55,
+      "three": 84,
+      "four": 36,
+      "five": 96
+    }
+  },
+  {
+    "student": "Rosabelle Cassam",
+    "absences": 2,
+    "final_exam": 68,
+    "term_paper": 92,
+    "midterm": 83,
+    "quizzes": {
+      "one": 96,
+      "two": 100,
+      "three": 80,
+      "four": 59,
+      "five": 89
+    }
+  },
+  {
+    "student": "Conrade Bayless",
+    "absences": 3,
+    "final_exam": 85,
+    "term_paper": 77,
+    "midterm": 91,
+    "quizzes": {
+      "one": 22,
+      "two": 51,
+      "three": 74,
+      "four": 65,
+      "five": 93
+    }
+  },
+  {
+    "student": "Colan Boys",
+    "absences": 8,
+    "final_exam": 56,
+    "term_paper": 94,
+    "midterm": 38,
+    "quizzes": {
+      "one": 15,
+      "two": 59,
+      "three": 86,
+      "four": 59,
+      "five": 100
+    }
+  },
+  {
+    "student": "Hynda Babbe",
+    "absences": 0,
+    "final_exam": 88,
+    "term_paper": 62,
+    "midterm": 66,
+    "quizzes": {
+      "one": 20,
+      "two": 73,
+      "three": 72,
+      "four": 39,
+      "five": 94
+    }
+  },
+  {
+    "student": "Brinna Goldin",
+    "absences": 5,
+    "final_exam": 55,
+    "term_paper": 69,
+    "midterm": 100,
+    "quizzes": {
+      "one": 85,
+      "two": 56,
+      "three": 91,
+      "four": 77,
+      "five": 94
+    }
+  },
+  {
+    "student": "Emma Renard",
+    "absences": 4,
+    "final_exam": 80,
+    "term_paper": 90,
+    "midterm": 84,
+    "quizzes": {
+      "one": 49,
+      "two": 54,
+      "three": 86,
+      "four": 24,
+      "five": 93
+    }
+  },
+  {
+    "student": "Tucker Hawkswell",
+    "absences": 7,
+    "final_exam": 78,
+    "term_paper": 93,
+    "midterm": 38,
+    "quizzes": {
+      "one": 95,
+      "two": 50,
+      "three": 70,
+      "four": 68,
+      "five": 87
+    }
+  },
+  {
+    "student": "Othello McCarry",
+    "absences": 1,
+    "final_exam": 94,
+    "term_paper": 68,
+    "midterm": 49,
+    "quizzes": {
+      "one": 64,
+      "two": 89,
+      "three": 85,
+      "four": 70,
+      "five": 91
+    }
+  },
+  {
+    "student": "Mindy Doghartie",
+    "absences": 1,
+    "final_exam": 56,
+    "term_paper": 61,
+    "midterm": 82,
+    "quizzes": {
+      "one": 49,
+      "two": 98,
+      "three": 78,
+      "four": 99,
+      "five": 91
+    }
+  },
+  {
+    "student": "Frannie Crush",
+    "absences": 8,
+    "final_exam": 59,
+    "term_paper": 98,
+    "midterm": 38,
+    "quizzes": {
+      "one": 43,
+      "two": 57,
+      "three": 75,
+      "four": 28,
+      "five": 95
+    }
+  },
+  {
+    "student": "Moll Bayfield",
+    "absences": 1,
+    "final_exam": 93,
+    "term_paper": 73,
+    "midterm": 87,
+    "quizzes": {
+      "one": 76,
+      "two": 86,
+      "three": 91,
+      "four": 86,
+      "five": 94
+    }
+  },
+  {
+    "student": "Corrie Boxall",
+    "absences": 8,
+    "final_exam": 88,
+    "term_paper": 65,
+    "midterm": 90,
+    "quizzes": {
+      "one": 46,
+      "two": 57,
+      "three": 90,
+      "four": 40,
+      "five": 100
+    }
+  },
+  {
+    "student": "Josiah Forshaw",
+    "absences": 3,
+    "final_exam": 69,
+    "term_paper": 80,
+    "midterm": 97,
+    "quizzes": {
+      "one": 44,
+      "two": 71,
+      "three": 71,
+      "four": 21,
+      "five": 89
+    }
+  },
+  {
+    "student": "Davey Jedrzejczyk",
+    "absences": 7,
+    "final_exam": 88,
+    "term_paper": 61,
+    "midterm": 41,
+    "quizzes": {
+      "one": 15,
+      "two": 70,
+      "three": 96,
+      "four": 74,
+      "five": 95
+    }
+  },
+  {
+    "student": "Gael Kunisch",
+    "absences": 3,
+    "final_exam": 79,
+    "term_paper": 88,
+    "midterm": 54,
+    "quizzes": {
+      "one": 36,
+      "two": 90,
+      "three": 83,
+      "four": 100,
+      "five": 100
+    }
+  }
+]
