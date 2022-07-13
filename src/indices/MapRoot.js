@@ -28,7 +28,7 @@ export default function MapRoot() {
       <h1>Map Root</h1>
       {/* <pre>{JSON.stringify(student_record, null, 2)}</pre> */}
 
-      <h2>List of Puppies</h2>
+      {/* <h2>List of Puppies</h2>
       <ul>
         {puppies.map((puppyName) => (
           <li key={puppyName}>{puppyName}</li>
@@ -41,9 +41,10 @@ export default function MapRoot() {
         {puppiesWithOwners.map((puppyOwnerObj) => (
           <li key={puppyOwnerObj.puppy}>
             {puppyOwnerObj.owner} is the owner of {puppyOwnerObj.puppy}
-          </li>
+          </l
+          i>
         ))}
-      </ul>
+      </ul> */}
 
       {student_record.map((student) => (
         <p key={student.student}>{student.student}</p>
